@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cofee Website</title>
+    <link href="src/output.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
+</head>
+<body>
+    <div class="container font-Poppins">
+        <div style="background-image: url('src/hero-bg.jpg');" class="w-screen h-screen bg-cover bg-center relative ">
+            <!-- Navbar Start Here -->
+            <div class="navbar text-white sm:flex sm:w-11/12 sm:m-auto sm:justify-between sm:items-center sm:pt-5">
+                <div class="logo text-3xl sm:text-4xl sm:font-semibold absolute sm:relative ml-2 mt-1 hover:text-amber-600 cursor-pointer">Cofee<span class="text-darkYellow-0">.</span></div>
+                <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer sm:hidden absolute right-2 top-2"></ion-icon>
+               
+                <ul class="nav-links absolute sm:relative text-black  sm:bg-transparent sm:text-white bg-white sm:flex sm:gap-8 ">
+                    
+                    <li class="pt-6 pl-6 pr-24 sm:p-0 hover:text-amber-600"><a href="#">Home</a></li>
+                    <li class="pt-6 pl-6 pr-24 sm:p-0 hover:text-amber-600"><a href="#">Products</a></li>
+                    <li class="pt-6 pl-6 pr-24 sm:p-0 hover:text-amber-600"><a href="#">Testimonials</a></li>
+                    <li class="pt-6 pl-6 pr-24 sm:p-0 hover:text-amber-600"><a href="#">About us</a></li>
+                    <li class="pt-6 pl-6 pr-24 pb-6 sm:p-0  hover:text-amber-600"><a href="#">Contact us</a></li>
+                </ul>
+            </div>
+            <!-- Navbar End Here  -->
+            
+            <div class="heroSection sm:absolute flex flex-col items-center sm:flex-none sm:items-start text-white top-20 sm:top-48  sm:ml-16">
+                <div class="text-4xl font-bold text-center pb-4 sm:text-left sm:text-5xl sm:w-[490px] sm:mb-5 mt-20 sm:mt-0">Start Your Day With Fresh Coffee</div>
+                <p class="text-center sm:text-left sm:w-[610px]">Coffee is a popular and beloved beverage enjoyed by people around the world. Awaken your senses with a steaming cup of liquid motivation.</p>
+                <button class="bg-white text-black hover:bg-amber-600 hover:text-white px-5 py-3 font-semibold rounded-md mt-3  sm:ml-0 sm:mt-7 w-36">Order Now</button>
+            </div>
+
+        </div>
+    </div>
+    <script>
+         const navLinks = document.querySelector('.nav-links')
+        function onToggleMenu(e){
+            e.name = e.name === 'menu' ? 'close' : 'menu'
+            navLinks.classList.toggle('top-[20%]')
+        }
+    </script>
+</body>
+</html>
